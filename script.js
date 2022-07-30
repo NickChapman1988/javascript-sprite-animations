@@ -1,3 +1,10 @@
+// defines playerState variable to change animation row
+let playerState = 'idle';
+const dropdown = document.getElementById('animations');
+dropdown.addEventListener('change', function(e){
+    playerState = e.target.value;
+});
+
 // canvas element to contain animation
 const canvas = document.getElementById('canvas1');
 // context of canvas element
@@ -14,8 +21,7 @@ playerImage.src = 'shadow_dog.png';
 const spriteWidth = 575;
 const spriteHeight = 523;
 
-// defines playerState variable to change animation row
-let playerState = 'bite';
+
 
 // cycles through row of animation frames starting from 0
 let gameFrame = 0;
